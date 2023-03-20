@@ -15,7 +15,7 @@ try:
     cur = conn.cursor()
 
      
-    cur.execute("ALTER TABLE reviews RENAME TO bootcamp")
+    cur.execute("ALTER TABLE bootcamp ALTER COLUMN bootcamp TYPE char")
 
     
     conn.commit()
