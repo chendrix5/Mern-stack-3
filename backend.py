@@ -14,7 +14,7 @@ try:
     
     cur = conn.cursor()
 
-
+     
     cur.execute("ALTER TABLE bootcamp ALTER COLUMN bootcamp TYPE char")
 
 
