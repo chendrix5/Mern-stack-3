@@ -17,5 +17,5 @@ function Bootcamp(props) {
     );
   }
   
-  export default Bootcamp;
+  export default bootcamp;
   
