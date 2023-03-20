@@ -1,7 +1,7 @@
 import psycopg2
 
 try:
-
+    
     conn = psycopg2.connect(
         dbname="bootcamp",
         user="postgres",
@@ -17,7 +17,7 @@ try:
      
     cur.execute("ALTER TABLE bootcamp ALTER COLUMN bootcamp TYPE char")
 
-
+    
     conn.commit()
 
     
