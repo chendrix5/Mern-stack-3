@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+  	color: #5b6574;
+  	font-size: 24px;
+  	padding: 20px 0 20px 0;
+  	border-bottom: 1px solid #dee0e4;
+}
+.login{
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+input{
+    justify-content: space-around;
+}
+
+.signup{
+    justify-content: space-around;
+    text-align: center;
+}
+
+input[type=text], [type=password], [type=email] {
+    padding:10px;
+    margin:10px 0;
+  }
+
+  form label {
+    width: 10px;
+    height: 10px;
+    padding-right: 4%;
+    color: black;
+  }
