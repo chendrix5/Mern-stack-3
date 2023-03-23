@@ -1,9 +1,36 @@
+<?php
+session_start();
+
+include("db.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    $name = $_POST['name'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if(!empty($email) && !empty($password) && !is_numeric($email))
+    {
+        $query = "insert into form (name, username, password, email) values ('$name', ' $username','$email', '$password')";
+
+        mysqli_query($con, $query);
+
+        echo"<script type='text/javascript'> alert('Sucessfully Register')</script>";
+    }
+    else{
+        echo"<script type='text/javascript'> alert('Please Enter Valid Information')</script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Sign Up</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="login.css">
@@ -19,33 +46,19 @@
 
         <h1>SIGNUP</h1>
 
-        <form class="signup" action=>
-            <div>
+        <form method = "POST">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name">
-            </div>
-            <div>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username">
-            </div>
-        
-            <div>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email">
-            </div>
-
-            <div>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password">
+                <input type="submit" name="" value="Submit">
             </div>
-            <div>
-                <label for="password_confirmation">Repeat Password</label>
-                <input type="password" id="password_confirmation" name="password_confirmation">
-            </div>
-            <input class="btn btn-primary" type="submit" value="SIGN UP">
-
-
         </form>
+        <p>Already have an account? <a href="login.php">Login</a></p>
 
 
 
