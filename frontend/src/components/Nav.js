@@ -15,10 +15,10 @@ function Nav() {
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                       <NavLink to="/">HOME</NavLink>
+                        <NavLink as={Link} to="./">HOME</NavLink>
                 </li>
                 <li class="nav-item">
-                        <NavLink to="./reviews">WRITE A REVIEW</NavLink>
+                        <NavLink as={Link} to="./reviews">WRITE A REVIEW</NavLink>
                 </li>
                 <li class="nav-item">
                          <NavLink to='./reviews'>LOGIN</NavLink>
