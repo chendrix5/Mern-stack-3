@@ -67,7 +67,9 @@ if (isset($_SESSION["user"])) {
 
         }
         ?>
+
         <form action="registration.php" method="post">
+        <div class="container">
             <div class="form-group">
                 <input type="text" class="form-control" name="fullname" placeholder="Full Name:">
             </div>
@@ -82,6 +84,7 @@ if (isset($_SESSION["user"])) {
             </div>
             <div class="form-btn">
                 <input type="submit" class="btn btn-primary" value="Register" name="submit">
+            </div>
             </div>
         </form>
         <div>
