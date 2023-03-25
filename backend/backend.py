@@ -14,7 +14,7 @@ def get_reviews():
         port="5432"
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM reviews")
+    cur.execute("SELECT * FROM bootcamp")
     rows = cur.fetchall()
     cur.close()
     conn.close()
