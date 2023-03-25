@@ -7,10 +7,13 @@ function Nav() {
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <a href="home.js">Home</a>
                 </li>
                 <li>
-                    <Link to="/Reviews">Reviews</Link>
+                    <a href="Reviews.js">Reviews</a>
+                </li>
+                <li>
+                    <a href="Reviews.js">User</a>
                 </li>
             </ul>
         </nav>
