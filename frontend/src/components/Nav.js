@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
+import { NavLink } from "react-bootstrap";
 
 function Nav() {
 
@@ -14,13 +15,13 @@ function Nav() {
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                       <a class="nav-link inactive" aria-current="page" href="#">HOME</a>
+                       <NavLink to="/">HOME</NavLink>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link inactive" aria-current="page" href="#">LEAVE A REVIEW</a>
+                        <NavLink to="./reviews">WRITE A REVIEW</NavLink>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link inactive" aria-current="page" href="#">LOGIN</a>
+                         <NavLink to='./reviews'>LOGIN</NavLink>
                  </li>
              </ul>
         </div>
