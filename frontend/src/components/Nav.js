@@ -21,8 +21,11 @@ function Nav() {
                         <NavLink as={Link} to="./reviews">WRITE A REVIEW</NavLink>
                 </li>
                 <li class="nav-item">
-                         <NavLink to='./reviews'>LOGIN</NavLink>
+                         <NavLink as={Link} to='./login'>LOGIN</NavLink>
                  </li>
+                <li class="nav-item">
+                        <NavLink as={Link} to='./signup'>SIGNUP</NavLink>
+                </li>
              </ul>
         </div>
         </div>
