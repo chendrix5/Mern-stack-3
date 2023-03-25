@@ -14,14 +14,14 @@ try:
     
     cur = conn.cursor()
 
-     
-    cur.execute("ALTER TABLE bootcamp ALTER COLUMN bootcamp TYPE char")
+    # 
+    cur.execute("ALTER TABLE reviews ADD COLUMN name TEXT")
 
-    
+    # Commit the changes
     conn.commit()
 
-    
-    cur.execute("SELECT * FROM bootcamp")
+    # Fetch the updated rows
+    cur.execute("SELECT * FROM reviews")
     rows = cur.fetchall()
     for row in rows:
         print(row)
@@ -30,6 +30,6 @@ except (Exception, psycopg2.Error) as error:
     print("Error connecting to PostgreSQL:", error)
 
 finally:
-    
+    # Close the cursor and connection objects
     cur.close()
     conn.close()
