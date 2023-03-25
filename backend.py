@@ -1,7 +1,11 @@
+from flask import Flask, request, jsonify
 import psycopg2
 
-try:
-    
+app = Flask(__name__)
+
+# GET request to fetch all reviews from the database
+@app.route('/reviews', methods=['GET'])
+def get_reviews():
     conn = psycopg2.connect(
         dbname="bootcamp",
         user="postgres",
@@ -9,27 +13,30 @@ try:
         host="localhost",
         port="5432"
     )
-    print("Connection to PostgreSQL database successful")
-
-    
     cur = conn.cursor()
-
-    # 
-    cur.execute("ALTER TABLE reviews ADD COLUMN name TEXT")
-
-    # Commit the changes
-    conn.commit()
-
-    # Fetch the updated rows
     cur.execute("SELECT * FROM reviews")
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
-
-except (Exception, psycopg2.Error) as error:
-    print("Error connecting to PostgreSQL:", error)
-
-finally:
-    # Close the cursor and connection objects
     cur.close()
     conn.close()
+    return jsonify(rows)
+
+# POST request to add a new review to the database
+@app.route('/reviews', methods=['POST'])
+def add_review():
+    data = request.get_json()
+    conn = psycopg2.connect(
+        dbname="bootcamp",
+        user="postgres",
+        password="Guitar04",
+        host="localhost",
+        port="5432"
+    )
+    cur = conn.cursor()
+    cur.execute("INSERT INTO reviews (rating, comment, name) VALUES (%s, %s, %s)", (data['rating'], data['comment'], data['name']))
+    conn.commit()
+    cur.close()
+    conn.close()
+    return "Review added successfully", 201
+
+if __name__ == '__main__':
+    app.run(debug=True)
