@@ -38,5 +38,6 @@ def add_review():
     conn.close()
     return "Review added successfully", 201
 
+
 if __name__ == '__main__':
     app.run(debug=True)
