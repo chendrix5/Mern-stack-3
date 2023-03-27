@@ -6,7 +6,7 @@ function Login() {
   return (
     <>
     <h1>LOGIN</h1>
-    <form onSubmit={handleSubmit}>
+    <form>
       <div class="mb-3">
         <label for="ussername" class="form-label">Username</label>
         <input type="text" class="form-control" id="username" aria-describedby="username">
