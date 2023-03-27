@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import { NavLink } from "react-bootstrap";
+import './styles.css'
+
 
 function Nav() {
 
