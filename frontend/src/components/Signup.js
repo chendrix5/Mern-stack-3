@@ -1,6 +1,16 @@
 import React from 'react';
+import { useRef, useState, useEffect } from "react";
 
-function Signup() {
+
+//regex statements used to validate username and password, usname saying it must start with a lower or uppercase letter and following parameters 
+const USER_REGEX = /^[a-zA-Z][a-zA-z0-9-_]{3,23}$/; //between 4 and 23 char
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+
+function Signup = () => {
+
+  consst userRef = use
+
+
   return (
     
     <>
