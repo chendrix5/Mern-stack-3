@@ -14,7 +14,7 @@ def get_reviews():
         port="5432"
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM reviews")
+    cur.execute("SELECT * FROM bootcamp")
     rows = cur.fetchall()
     cur.close()
     conn.close()
@@ -37,6 +37,7 @@ def add_review():
     cur.close()
     conn.close()
     return "Review added successfully", 201
+
 
 if __name__ == '__main__':
     app.run(debug=True)

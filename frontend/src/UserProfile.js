@@ -1,10 +1,9 @@
 import React from 'react';
 
-
-function Users() {
+function userProfile() {
   return (
     <h1>USER PAGE HERE</h1>
   );
 }
 
-export default Users;
+export default userProfile;
