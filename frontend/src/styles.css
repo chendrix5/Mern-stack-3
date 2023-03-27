@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    color: #613659;
+    color: white;
 }
 
 p {
@@ -9,8 +9,9 @@ p {
 
 body {
     background: #6b4b5b;
-    text-align: center
+    text-align: center;
 }
+
 form {
     width: 300px;
     height: 400x;
