@@ -3,10 +3,9 @@ import './styles.css'
 
 function Reviews() {
   return (
-    <div>Reviews
+    <div>SUBMIT YOUR BOOTCAMP REVIEW HERE
     <form>
     <label>
-    REVIEWS
     <input type="text" name="name" />
     </label>
     <input type="submit" value="Submit" />  

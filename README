@@ -1,0 +1,5 @@
+The goal of this app is to allow user to create reviews on coding bootcamps that they have gone through.
+This way people are not going to multiple sources to learn about a bootcamp that they want to enjoy, but instead
+the reviews are all in one place and easy to sort through. There is also going to be a login system so that users can create
+a profile and go back to what they posted and edit or delete reviews. While building this app we used react, react-router-dom, bootstrap, python,
+node.js, and postgress.

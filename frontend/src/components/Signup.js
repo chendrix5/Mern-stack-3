@@ -3,37 +3,27 @@ import React from 'react';
 
 function Signup() {
   return (
+    
+    <>
     <h1>SIGNUP</h1>
+    <form>
+    <div class="mb-3">
+      <label for="ussername" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" aria-describedby="username"></input>
+    </div>
+    <div class="mb-3">
+     <label for="email" class="form-label">Email address</label>
+     <input type="email" class="form-control" id="email" aria-describedby="email"></input>
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="passsword" class="form-label">Password</label>
+     <input type="password" class="form-control" id="password"></input>
+    </div>
+<button type="submit" class="btn btn-primary">SIGN UP</button>
+</form>
+</>
   );
 }
 
-const para = document.createElement("h3");
-para.innerText = "Create an account to get started!"
-document.body.appendChild(para)
-
-function Def (html) {
-  return (
-    <html>
-      <head>
-        <title>Sign Up Here!</title>
-      </head>
-      <main>
-        <div>
-          <label for="email">Email:</label>
-          <span class="required-field">*</span>
-          <input type="email" id="email" name="email" required />
-          <label for="username">Username:</label>
-          <span class="required-field">*</span>
-          <input type="text" id="username" name="username" required minlength="2" maxlength="35" />
-          <label>Password:</label>
-          <span class="required-field">*</span>
-          <input type="password" required />
-          <input type="submit" value="Sign Up" />
-        </div>
-      </main>
-    </html>
-  )
-}
-
-export {Def}
 export default Signup;
