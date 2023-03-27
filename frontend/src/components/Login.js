@@ -1,26 +1,27 @@
 import React from 'react';
+import Default from '../views/default';
 import '../styles.css'
 
 
 function Login() {
   return (
-    <>
-    <h1>LOGIN</h1>
+    <Default>
     <form>
       <div class="mb-3">
-        <label for="ussername" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" aria-describedby="username">
+        <label for="username" class="form-label">USERNAME</label>
+        <input type="text" class="form-control" id="username">
        </input>
       </div>
       <div class="mb-3">
-        <label for="passsword" class="form-label">Password</label>
+        <label for="passsword" class="form-label">PASSWORD</label>
        <input type="password" class="form-control" id="password">
        
        </input>
       </div>
   <button type="submit" class="btn btn-primary">LOGIN</button>
 </form>
-</>
+
+</Default>
   );
 }
 
