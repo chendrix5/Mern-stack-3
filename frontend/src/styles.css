@@ -45,3 +45,13 @@ form {
     color: black;
     border-color:white;
   }
+
+  .card{
+    margin-left: 160px;
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    width: 600px;
+    border-color:rgb(214, 184, 206);
+    border-width:5px;
+  }
