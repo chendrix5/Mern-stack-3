@@ -3,7 +3,6 @@ import psycopg2
 
 app = Flask(__name__)
 
-# GET request to fetch all reviews from the database
 @app.route('/reviews', methods=['GET'])
 def get_reviews():
     conn = psycopg2.connect(
@@ -20,7 +19,6 @@ def get_reviews():
     conn.close()
     return jsonify(rows)
 
-# POST request to add a new review to the database
 @app.route('/reviews', methods=['POST'])
 def add_review():
     data = request.get_json()
@@ -32,7 +30,7 @@ def add_review():
         port="5432"
     )
     cur = conn.cursor()
-    cur.execute("INSERT INTO reviews (rating, comment, name) VALUES (%s, %s, %s)", (data['rating'], data['comment'], data['name']))
+    cur.execute("INSERT INTO bootcamp (starrating, review, name) VALUES (%s, %s, %s)", (data['starrating'], data['review'], data['name']))
     conn.commit()
     cur.close()
     conn.close()
