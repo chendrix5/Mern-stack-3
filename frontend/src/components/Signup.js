@@ -8,7 +8,7 @@ function Signup() {
     <container>
     <form action="/signup" method="POST">
     <div class="mb-3">
-      <label for="ussername" class="form-label">USERNAME</label>
+      <label for="username" class="form-label">USERNAME</label>
       <input type="text" class="form-control" id="username" aria-describedby="username" name="username" required></input>
     </div>
     <div class="mb-3">

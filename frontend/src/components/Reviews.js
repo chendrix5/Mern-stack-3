@@ -2,7 +2,7 @@ import React from 'react';
 import Default from '../views/default';
 import './styles.css'
 
-function Reviews() {
+function Reviews(data) {
   return (
 
     <Default>
